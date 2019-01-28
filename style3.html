@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://jlblogistics.com/account/css/assets/bootstrap.css">
+    <style>
+      body {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0;
+      }
+      .wrapper{
+        width:700px;
+        margin: 0 auto;
+      }
+      .w-50{
+        width:45%;
+      }
+      #map {
+        height: 500px;
+        width:100%;
+      }
+      
+      .wrapper #autocomplete{
+        width: 100%;
+        padding: 10px;
+        margin:5px;
+      }
+      #results img{
+        width:100%;
+        height:auto;
+      }
+      .gray-bg{
+        background: #ddd;
+        font-size:11px;
+        padding:10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper container">
+      <h1 class="h1">Custom Styled Map</h1>
+      <div>Click twice on the map to get any directions</div>
+      <div class="p-1" id="attribution"></div>
+      <div class="input-wrapper" style="display:none">
+        <input class="w-50" id="autocomplete" value=""/>
+        <select class="w-50" id="country">
+          <option value="United States">United States</option>
+          <option value="Brazil">Brazil</option>
+          <option value="Canada">Canada</option>
+          <option value="France">France</option>
+          <option value="Germany">Germany</option>
+          <option value="Mexico">Mexico</option>
+          <option value="New Zealand">New Zealand</option>
+          <option value="Italy">Italy</option>
+        </select>
+      </div>
+      
+      <div id="map"></div>
+      <div id="directons-panel"></div>
+      <div id="results"></div>
+    </div>
+
+    <script type="text/javascript" src="style3.js"></script>
+
+    <script src="./map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGraz0piF8xyoi2zAdb8xKTooF_8wqunc&callback=initMap"
+    async defer></script>
+  </body>
+</html>
